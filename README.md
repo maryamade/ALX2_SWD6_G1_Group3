@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/cfd74809-d463-4e35-8e96-662086c3691e)# SeleniumTest Project
+SeleniumTest Project
 This project is a Selenium-based automation test project using Java, Maven, and TestNG.
 It automates scenarios on the Demoblaze website such as user sign-up, login, product selection, adding to cart, and purchase.
 
@@ -35,7 +35,7 @@ This project uses Maven to manage dependencies. Key dependencies include:
 
 ```
 - **Java Faker** (for generating fake data)
-  ```
+```
        <dependency>
             <groupId>com.github.javafaker</groupId>
             <artifactId>javafaker</artifactId>
@@ -43,7 +43,7 @@ This project uses Maven to manage dependencies. Key dependencies include:
         </dependency>
 ```
 - **ExtentReports** (for reporting)
-  ```
+```
       <dependency>
             <groupId>com.relevantcodes</groupId>
             <artifactId>extentreports</artifactId>
@@ -52,7 +52,7 @@ This project uses Maven to manage dependencies. Key dependencies include:
         </dependency>
 ```
 - **Log4j** (for logging)
-  ```
+```
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
