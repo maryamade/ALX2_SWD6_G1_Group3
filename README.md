@@ -2,6 +2,8 @@ SeleniumTest Project
 This project is a Selenium-based automation test project using Java, Maven, and TestNG.
 It automates scenarios on the Demoblaze website such as user sign-up, login, product selection, adding to cart, and purchase.
 
+Source Code :  [Master Branch](https://github.com/maryamade/ALX2_SWD6_G1_Group3/tree/master)
+
 ## Prerequisites
 
 - **Java** – Ensure Java is installed and JAVA_HOME is set.
