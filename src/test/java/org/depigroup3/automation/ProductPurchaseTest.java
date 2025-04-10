@@ -53,9 +53,6 @@ public class ProductPurchaseTest {
 
     private static final Faker faker = new Faker(); // For generating random data
 
-
-
-
     private void initializePageObjects() {
         homePage = new HomePage(driver);
         signUpPage = new SignUpPage(driver);
@@ -360,7 +357,7 @@ public class ProductPurchaseTest {
             Assert.fail("Test failed with exception: " + e.getMessage());
         }
     }
-
+//aa
     // New Test 11: Verify login validation with multiple credentials
     @Test(priority = 11)
     public void testLoginValidation() {
