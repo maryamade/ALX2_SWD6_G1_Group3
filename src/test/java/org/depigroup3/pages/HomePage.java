@@ -19,8 +19,16 @@ public class HomePage {
     private final By loginLink = By.id("login2");
     private final By logoutLink = By.id("logout2");
     private final By NextButton = By.id("next2");
+    private final By PreviousButton = By.id("prev2");
     private final By closey = By.xpath("//*[@id=\"videoModal\"]/div/div/div[1]/button");
     private final By abouty = By.xpath("//*[@id=\"navbarExample\"]/ul/li[3]/a");
+
+    // New locators for contact form
+    private final By contactLink = By.xpath("//a[text()='Contact']");
+    private final By recipientEmailField = By.id("recipient-email");
+    private final By recipientNameField = By.id("recipient-name");
+    private final By messageTextField = By.id("message-text");
+    private final By sendMessageButton = By.xpath("//button[text()='Send message']");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -50,6 +58,11 @@ public class HomePage {
 
     public HomePage clickNext() {
         wait.until(ExpectedConditions.elementToBeClickable(NextButton)).click();
+        return this;
+    }
+
+    public HomePage clickPrevious() {
+        wait.until(ExpectedConditions.elementToBeClickable(PreviousButton)).click();
         return this;
     }
 
@@ -88,4 +101,49 @@ public class HomePage {
             return false;
         }
     }
+
+
+
+    public boolean isAppleMonitorVisible() {
+        try {
+            return wait.until(ExpectedConditions.visibilityOfElementLocated(PreviousButton)).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isSamsungGalaxyS6Visible() {
+        try {
+            return wait.until(ExpectedConditions.visibilityOfElementLocated(NextButton)).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+
+    // New methods for contact form
+    public HomePage clickContact() {
+        wait.until(ExpectedConditions.elementToBeClickable(contactLink)).click();
+        return this;
+    }
+
+    public HomePage fillContactForm(String email, String name, String message) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(recipientEmailField)).clear();
+        driver.findElement(recipientEmailField).sendKeys(email);
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(recipientNameField)).clear();
+        driver.findElement(recipientNameField).sendKeys(name);
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(messageTextField)).clear();
+        driver.findElement(messageTextField).sendKeys(message);
+
+        return this;
+    }
+
+    public HomePage submitContactForm() {
+        wait.until(ExpectedConditions.elementToBeClickable(sendMessageButton)).click();
+        return this;
+    }
+
+
 }

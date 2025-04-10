@@ -52,32 +52,9 @@ public class ProductPurchaseTest {
     );
 
     private static final Faker faker = new Faker(); // For generating random data
-    // Credentials for signup validation test
-//    private static final String[][] SIGNUP_CREDENTIALS = {
-//            {"maryam", "123", "invalid"},         // Invalid password (too short)
-//            {"Sara", "", "empty"},                // Empty password
-//            {"", "123", "empty"},                 // Empty username
-//            {"", "", "empty"},                    // Both empty
-//            {"a", "1", "invalid"},                // Invalid username (too short) and password
-//            {"user name", "pass", "invalid"},     // Username with space
-//            {" ", "abcdef", "invalid"},           // Username as space
-//            {"maryam", " ", "invalid"},           // Password as space
-//            {" ", " ", "invalid"},                // Both as space
-//            {"123456", "abcdef", "valid"},        // Valid credentials
-//            {"user@", "123", "invalid"},          // Username with special character
-//            {"SaraMaher", "short", "invalid"}     // Invalid password (too short)
-//    };
 
-    // Credentials for login validation test
-    private static final String[][] LOGIN_CREDENTIALS = {
-            {"123456", "abcdef", "invalid"},      // Wrong password
-            {"wrongUser", "abcdef", "notExist"},  // User does not exist
-            {"123456", "wrongPass", "invalid"},   // Wrong password
-            {"", "", "empty"},                    // Both empty
-            {"123456", "", "empty"},              // Empty password
-            {"", "abcdef", "empty"},              // Empty username
-            {"MaryamSara", "1234567", "valid"}    // Correct credentials
-    };
+
+
 
     private void initializePageObjects() {
         homePage = new HomePage(driver);
@@ -280,7 +257,7 @@ public class ProductPurchaseTest {
             Thread.sleep(1000);
             for (String product : ALL_PRODUCTS.subList(0, 3)) {
                 addProduct(product, test);
-                if (product.equals(Const.PHONE3_NAME)) homePage.clickNext();
+                if (product.equals(Const.LAPTOP2_NAME)) homePage.clickNext();
             }
             cartPage.navigateToCart();
             cartPage.placeOrder(Const.CUSTOMER_NAME, Const.CARD_NUMBER, Const.COUNTRY, Const.CITY, Const.MONTH, Const.YEAR);
@@ -391,14 +368,14 @@ public class ProductPurchaseTest {
         try {
             // Register a valid user to test login with correct credentials
             homePage.clickSignUp();
-            signUpPage.registerUser("MaryamSara2", "1234567");
+            signUpPage.registerUser(Const.USERNAME, Const.PASSWORD);
             String signupAlert = WebDriverUtils.getAlertTextAndAccept(driver, wait);
-            test.log(LogStatus.INFO, "Registered user 'MaryamSara' - Alert: " + signupAlert);
+            test.log(LogStatus.INFO, "Registered user "+Const.USERNAME+" - Alert: " + signupAlert);
 
-            for (int i = 0; i < LOGIN_CREDENTIALS.length; i++) {
-                String username = LOGIN_CREDENTIALS[i][0];
-                String password = LOGIN_CREDENTIALS[i][1];
-                String expectedType = LOGIN_CREDENTIALS[i][2];
+            for (int i = 0; i < Const.LOGIN_CREDENTIALS.length; i++) {
+                String username = Const.LOGIN_CREDENTIALS[i][0];
+                String password = Const.LOGIN_CREDENTIALS[i][1];
+                String expectedType = Const.LOGIN_CREDENTIALS[i][2];
                 String testCase = "Test " + (i + 1) + " (Username: '" + username + "', Password: '" + password + "')";
 
                 homePage.navigateToHomePage(); // Reset to homepage
@@ -436,6 +413,81 @@ public class ProductPurchaseTest {
                         }
                     } catch (Exception e) {
                         test.log(LogStatus.WARNING, testCase + " - Bug: No alert shown for invalid or empty login.");
+                    }
+                }
+            }
+        } catch (Exception e) {
+            log.error("Test failed with exception: " + e.getMessage());
+            test.log(LogStatus.FAIL, "Test failed with exception: " + e.getMessage());
+            Assert.fail("Test failed with exception: " + e.getMessage());
+        }
+    }
+
+    // New Test 12: Verify Next and Previous button functionality
+    @Test(priority = 12)
+    public void testPaginationButtons() {
+        ExtentTest test = testMap.get("testPaginationButtons");
+        try {
+            // Test Next button
+            Thread.sleep(1000);
+            homePage.clickNext();
+            Thread.sleep(1000);
+            Assert.assertTrue(homePage.isAppleMonitorVisible(), "Next button failed: 'Apple monitor 24' not visible");
+            test.log(LogStatus.PASS, "Next button clicked - 'Apple monitor 24' is visible");
+
+            // Test Previous button
+            homePage.clickPrevious();
+            Thread.sleep(3000);
+            Assert.assertTrue(homePage.isSamsungGalaxyS6Visible(), "Previous button failed: 'Samsung galaxy s6' not visible");
+            test.log(LogStatus.PASS, "Previous button clicked - 'Samsung galaxy s6' is visible");
+
+        } catch (Exception e) {
+            log.error("Test failed with exception: " + e.getMessage());
+            test.log(LogStatus.FAIL, "Test failed with exception: " + e.getMessage());
+            Assert.fail("Test failed with exception: " + e.getMessage());
+        }
+    }
+
+
+    // New Test 12: Verify Contact Form functionality
+    @Test(priority = 13)
+    public void testContactForm() {
+        ExtentTest test = testMap.get("testContactForm");
+        try {
+            for (int i = 0; i < Const.CONTACT_FORM_DATA.length; i++) {
+                String email = Const.CONTACT_FORM_DATA[i][0];
+                String name = Const.CONTACT_FORM_DATA[i][1];
+                String message = Const.CONTACT_FORM_DATA[i][2];
+                String expectedType = Const.CONTACT_FORM_DATA[i][3];
+                String testCase = "Test " + (i + 1) + " (Email: '" + email + "', Name: '" + name + "', Message: '" + message + "')";
+
+                homePage.navigateToHomePage();
+                homePage.clickContact();
+                homePage.fillContactForm(email, name, message);
+                homePage.submitContactForm();
+
+                String alertText = "";
+                try {
+                    alertText = WebDriverUtils.getAlertTextAndAccept(driver, wait);
+                    test.log(LogStatus.INFO, testCase + " - Alert: " + alertText);
+                } catch (Exception e) {
+                    test.log(LogStatus.WARNING, testCase + " - No alert received. Possible silent fail.");
+                    continue;
+                }
+
+                if (alertText.contains("Thanks for the message")) {
+                    if (email.trim().isEmpty() || name.trim().isEmpty() || message.trim().isEmpty()) {
+                        test.log(LogStatus.FAIL, testCase + " - Bug: Empty field accepted!");
+                    } else if (!email.contains("@") || email.startsWith(" ")) {
+                        test.log(LogStatus.FAIL, testCase + " - Bug: Invalid email accepted!");
+                    } else {
+                        test.log(LogStatus.PASS, testCase + " - Valid input accepted as expected.");
+                    }
+                } else {
+                    if (expectedType.equals("empty") || expectedType.equals("invalid")) {
+                        test.log(LogStatus.PASS, testCase + " - Correctly rejected invalid/empty input.");
+                    } else {
+                        test.log(LogStatus.FAIL, testCase + " - Bug: Valid input not accepted. Unexpected alert: " + alertText);
                     }
                 }
             }

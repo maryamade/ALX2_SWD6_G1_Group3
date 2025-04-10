@@ -24,11 +24,6 @@ public class CheckoutPage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(Const.EXPLICIT_WAIT));
     }
 
-    //Confirm the checkout
-    public CheckoutPage confirmCheckout() {
-        wait.until(ExpectedConditions.elementToBeClickable(confirmButton)).click();
-        return this;
-    }
 
     //Close the checkout popup
     public CheckoutPage closePopup() {

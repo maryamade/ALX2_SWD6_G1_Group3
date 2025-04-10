@@ -60,4 +60,28 @@ public class Const {
     public static final String REPORT_FILE = "DemoblazeTestReport.html";
     //Driver Path
     public static final String CHROME_DRIVER_PATH = "./drivers/chromedriver.exe";
+
+
+    // Credentials for login validation test
+    public static final String[][] LOGIN_CREDENTIALS = {
+            {"123456", "abcdef", "invalid"}, // Wrong password.
+            {"wrongUser", "abcdef", "notExist"}, // User does not exist.
+            {"123456", "wrongPass", "invalid"}, // Wrong password.
+            {"", "", "empty"}, // Please fill out Username and Password.
+            {"123456", "", "empty"}, // Please fill out Username and Password.
+            {"", "abcdef", "empty"}, // Please fill out Username and Password.
+            {"MaryamSara", "1234567", "valid"}, // Correct
+            {"wrongUser2", "abcdef", "notExist"}, // User does not exist.
+    };
+    public static final String[][] CONTACT_FORM_DATA = {
+            {"test@example.com", "John Doe", "Hello, this is a test message", "valid"},
+            {"", "Jane Doe", "Test message", "empty"},
+            {"invalid.email", "Bob Smith", "Another test", "invalid"},
+            {"user@domain.com", "", "Message here", "empty"},
+            {"test@domain.com", "Alice", "", "empty"},
+            {" @space.com", "Space User", "Space test", "invalid"},
+            {"", "", "", "empty"},
+            {faker.internet().emailAddress(), faker.name().fullName(), faker.lorem().sentence(), "valid"}
+    };
+
 }
