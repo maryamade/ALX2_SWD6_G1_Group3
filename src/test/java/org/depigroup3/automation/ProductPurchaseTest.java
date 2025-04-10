@@ -385,7 +385,6 @@ public class ProductPurchaseTest {
     }
 
     // New Test 11: Verify login validation with multiple credentials
-    // New Test 11: Verify login validation with multiple credentials
     @Test(priority = 11)
     public void testLoginValidation() {
         ExtentTest test = testMap.get("testLoginValidation");
