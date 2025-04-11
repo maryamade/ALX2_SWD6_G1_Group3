@@ -20,6 +20,9 @@ public class TestAddAllProductsToCart {
     // Define product IDs to test (1 to 15)
     int[] productIds = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
 
+    // Single valid order data
+    String[] orderData = {"Maryam", "Egypt", "Cairo", "1234567890123456", "03", "2025", "valid"};
+
     @BeforeTest
     public void setupReport() throws IOException {
         System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
@@ -30,6 +33,38 @@ public class TestAddAllProductsToCart {
     public void setupDriver() {
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    }
+
+    // Reused method from PlaceOrderWithReport
+    public void waitForPageLoad() {
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(
+                webDriver -> ((JavascriptExecutor) webDriver)
+                        .executeScript("return document.readyState")
+                        .equals("complete")
+        );
+    }
+
+    // Reused method from PlaceOrderWithReport
+    public void fillInput(By by, String value) {
+        int retries = 3;
+        while (retries > 0) {
+            try {
+                WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+                element.clear();
+                element.sendKeys(value);
+                return;
+            } catch (StaleElementReferenceException e) {
+                retries--;
+                if (retries == 0) {
+                    throw e;
+                }
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException ie) {
+                    Thread.currentThread().interrupt();
+                }
+            }
+        }
     }
 
     @Test
@@ -86,17 +121,20 @@ public class TestAddAllProductsToCart {
             try {
                 // Step 1: Go to homepage
                 driver.get("https://demoblaze.com/index.html");
-                result.append("Navigated to homepage. \n");
 
                 // Step 2: Navigate to product page
                 driver.get(productUrl);
-                result.append("Navigated to product page: ").append(productUrl).append(". \n");
 
-                // Step 3: Click "Add to cart"
+                // Step 3: Extract product name
+                WebElement productNameElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("h2.name")));
+                String productName = productNameElement.getText();
+                result.append(productName).append("\n");
+
+                // Step 4: Click "Add to cart"
                 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"tbodyid\"]/div[2]/div/a"))).click();
                 result.append("Clicked 'Add to cart'. \n");
 
-                // Step 4: Handle "Product added" alert
+                // Step 5: Handle "Product added" alert
                 try {
                     wait.withTimeout(Duration.ofSeconds(5)).until(ExpectedConditions.alertIsPresent());
                     Alert alert = driver.switchTo().alert();
@@ -123,6 +161,52 @@ public class TestAddAllProductsToCart {
             // Clear result for the next product
             result.setLength(0);
         }
+
+        // Part 2: Checkout with one order data
+        result.append("Checkout Test => ");
+        try {
+            // Go to cart
+            driver.get("https://demoblaze.com/index.html");
+            waitForPageLoad();
+            wait.until(ExpectedConditions.elementToBeClickable(By.id("cartur"))).click();
+            waitForPageLoad();
+
+            // Click "Place Order"
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Place Order']"))).click();
+
+            // Fill in form with orderData
+            fillInput(By.id("name"), orderData[0]);
+            fillInput(By.id("country"), orderData[1]);
+            fillInput(By.id("city"), orderData[2]);
+            fillInput(By.id("card"), orderData[3]);
+            fillInput(By.id("month"), orderData[4]);
+            fillInput(By.id("year"), orderData[5]);
+
+            // Click purchase
+            waitForPageLoad();
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Purchase']"))).click();
+
+            // Check for confirmation
+            try {
+                WebElement confirmation = wait.withTimeout(Duration.ofSeconds(15))
+                        .until(ExpectedConditions.visibilityOfElementLocated(By.className("sweet-alert")));
+                String confirmationText = confirmation.getText();
+                if (orderData[6].equals("valid")) {
+                    result.append("Success: Order placed successfully.\n").append(confirmationText).append("\n");
+                } else {
+                    result.append("Bug: Invalid data was accepted.\n").append(confirmationText).append("\n");
+                }
+                driver.findElement(By.xpath("//button[text()='OK']")).click();
+            } catch (TimeoutException e) {
+                result.append("Bug: Valid data was not processed (no confirmation).\n");
+            }
+
+        } catch (Exception e) {
+            result.append("Exception during checkout: ").append(e.getMessage()).append("\n");
+        }
+
+        System.out.println(result.toString() + "------------------------------------------------");
+        writer.println(result.toString() + "------------------------------------------------");
     }
 
     @AfterMethod
