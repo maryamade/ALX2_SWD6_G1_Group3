@@ -1,0 +1,625 @@
+{
+	"info": {
+		"_postman_id": "b70e82df-73d0-4ec5-bfba-e5090b166c8e",
+		"name": "Simple Books API DEPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43348422",
+		"_collection_link": "https://www.postman.com/galactic-station-85267/depi/collection/pa9jq3t/simple-books-api-depi?action=share&source=collection_link&creator=43348422"
+	},
+	"item": [
+		{
+			"name": "API status",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"\r",
+							"// Check the response status code and execute the appropriate test\r",
+							"if (pm.response.code === 200 || pm.response.code === 201) {\r",
+							"    pm.test(\"Api Status Is Ok - Status code is \" + pm.response.code, function () {\r",
+							"        pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+							"    });\r",
+							" \r",
+							"} else {\r",
+							"    pm.test(\"Unexpected status code\", function () {\r",
+							"        pm.expect(pm.response.code).to.be.oneOf([200, 201], \"Unexpected status code: \" + pm.response.code);\r",
+							"    });\r",
+							"}\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/status",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List of books",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"\r",
+							"\r",
+							"// Check the response status code and execute the appropriate test\r",
+							"if (pm.response.code === 200) {\r",
+							"    pm.test(\"List of books is ok, Status code is 200\", function () {\r",
+							"        pm.expect(pm.response.code).to.equal(200);\r",
+							"\r",
+							"pm.test(\"There are 6 books\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"6\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"    });\r",
+							"} else if (pm.response.code === 401) {\r",
+							"    pm.test(\"Please Register New account and update the token - Status code is 401 Unauthorized\", function () {\r",
+							"       pm.expect(pm.response.code).to.not.equal(401);\r",
+							"    });\r",
+							"}\r",
+							"\r",
+							"else {\r",
+							"    pm.test(\"Unexpected status code\", function () {\r",
+							"        pm.expect([201, 409]).to.include(pm.response.code);\r",
+							"    });\r",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/books",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "non-fiction",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a single book",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Check the response status code and execute the appropriate test\r",
+							"if (pm.response.code === 200) {\r",
+							"    pm.test(\"Single book is ok, Status code is 200\", function () {\r",
+							"        pm.expect(pm.response.code).to.equal(200);\r",
+							"    });\r",
+							"}else if (pm.response.code === 403) {\r",
+							"    pm.test(\"Please check your permissions - Status code is 403 Forbidden\", function () {\r",
+							"        pm.expect(pm.response.code).to.not.equal(403);\r",
+							"    });\r",
+							"}  \r",
+							"\r",
+							"else {\r",
+							"    pm.test(\"Unexpected status code\", function () {\r",
+							"        pm.expect([201, 409]).to.include(pm.response.code);\r",
+							"    });\r",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/books/:bookId",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"books",
+						":bookId"
+					],
+					"variable": [
+						{
+							"key": "bookId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Client",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Check the response status code and execute the appropriate test\r",
+							"if (pm.response.code === 201) {\r",
+							"    pm.test(\"Account created successfully - Status code is 201\", function () {\r",
+							"        pm.expect(pm.response.code).to.equal(201);\r",
+							"    });\r",
+							"} else if (pm.response.code === 409) {\r",
+							"    pm.test(\"Account already registered - Status code is 409\", function () {\r",
+							"       pm.expect(pm.response.code).to.not.equal(409);\r",
+							"    });\r",
+							"} else if (pm.response.code === 400) {\r",
+							"    pm.test(\"Invalid or missing client email- Status code is 400\", function () {\r",
+							"       pm.expect(pm.response.code).to.not.equal(400);\r",
+							"    });\r",
+							"    \r",
+							"}else if (pm.response.code === 403) {\r",
+							"    pm.test(\"Please check your permissions - Status code is 403 Forbidden\", function () {\r",
+							"        pm.expect(pm.response.code).to.not.equal(403);\r",
+							"    });\r",
+							"}  \r",
+							"\r",
+							"else {\r",
+							"    pm.test(\"Unexpected status code\", function () {\r",
+							"        pm.expect([201, 409]).to.include(pm.response.code);\r",
+							"    });\r",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"clientName\": \"BestTeam9\",\r\n   \"clientEmail\": \"BestTeam9@example.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api-clients",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api-clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Check the response status code and execute the appropriate test\r",
+							"if (pm.response.code === 201) {\r",
+							"    pm.test(\"New Order Has been Submit - Status code is 201\", function () {\r",
+							"        pm.expect(pm.response.code).to.equal(201);\r",
+							"        console.log(\"New Order Has been Submit.\");\r",
+							"    });\r",
+							"} else if (pm.response.code === 401) {\r",
+							"    pm.test(\"Please Register New account and update the token - Status code is 401 Unauthorized\", function () {\r",
+							"       pm.expect(pm.response.code).to.not.equal(401);\r",
+							"    });\r",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TokenBestTeam}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"bookId\": 1,\r\n  \"customerName\": \"ok\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/orders",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all orders",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if (pm.response.code === 404) {\r",
+							"    pm.test(`Error, No Orders founds - Status code is 404`, function () {\r",
+							"       pm.expect(pm.response.code).to.not.equal(404);\r",
+							"    });\r",
+							"} else if (pm.response.code === 200) {\r",
+							"    pm.test(`Get All Order Success, Status code is 200`, function () {\r",
+							"        pm.expect(pm.response.code).to.equal(200);\r",
+							"    });\r",
+							"    \r",
+							"} else if (pm.response.code === 401) {\r",
+							"    pm.test(\"Please Register New account and update the token - Status code is 401 Unauthorized\", function () {\r",
+							"       pm.expect(pm.response.code).to.not.equal(401);\r",
+							"    });\r",
+							"}\r",
+							"else {\r",
+							"    pm.test(\"Unexpected status code\", function () {\r",
+							"        pm.expect([200, 404]).to.include(pm.response.code);\r",
+							"    });\r",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TokenBestTeam}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/orders",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get an order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Check the response status code and execute the appropriate test\r",
+							"const orderId = pm.variables.get(\"orderIdOk\");\r",
+							"if (pm.response.code === 404) {\r",
+							"    pm.test(`Error, No Order found With this ID: ${orderId} - Status code is 404`, function () {\r",
+							"       pm.expect(pm.response.code).to.not.equal(404);\r",
+							"    });\r",
+							"} else if (pm.response.code === 200) {\r",
+							"    pm.test(`Order with your required id ${orderId} has been found - Status code is 200`, function () {\r",
+							"        pm.expect(pm.response.code).to.equal(200);\r",
+							"    });\r",
+							"    \r",
+							"} else if (pm.response.code === 401) {\r",
+							"    pm.test(\"Please Register New account and update the token - Status code is 401 Unauthorized\", function () {\r",
+							"       pm.expect(pm.response.code).to.not.equal(401);\r",
+							"    });\r",
+							"}\r",
+							"else {\r",
+							"    pm.test(\"Unexpected status code\", function () {\r",
+							"        pm.expect([200, 404]).to.include(pm.response.code);\r",
+							"    });\r",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TokenBestTeam}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/orders/:orderId",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"orders",
+						":orderId"
+					],
+					"variable": [
+						{
+							"key": "orderId",
+							"value": "{{orderIdOk}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update an order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const orderId = pm.variables.get(\"orderIdOk\");\r",
+							"\r",
+							"if (pm.response.code === 404) {\r",
+							"    pm.test(`Error, No Order With ID: ${orderId} to update - Status code is 404`, function () {\r",
+							"        pm.expect(pm.response.code).to.not.equal(404);\r",
+							"    });\r",
+							"} else if (pm.response.code === 204) {\r",
+							"    pm.test(`Order ${orderId} customerName has been updated - Status code is 204`, function () {\r",
+							"        pm.expect(pm.response.code).to.equal(204);\r",
+							"    });\r",
+							"    \r",
+							"} else if (pm.response.code === 401) {\r",
+							"    pm.test(\"Please Register New account and update the token - Status code is 401 Unauthorized\", function () {\r",
+							"       pm.expect(pm.response.code).to.not.equal(401);\r",
+							"    });\r",
+							"\r",
+							"}else if (pm.response.code === 403) {\r",
+							"    pm.test(\"Please check your permissions - Status code is 403 Forbidden\", function () {\r",
+							"        pm.expect(pm.response.code).to.not.equal(403);\r",
+							"    });\r",
+							"} else {\r",
+							"    pm.test(\"Unexpected status code\", function () {\r",
+							"        pm.expect([200, 404]).to.include(pm.response.code);\r",
+							"    });\r",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TokenBestTeam}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customerName\": \"ok3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/orders/:orderId",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"orders",
+						":orderId"
+					],
+					"variable": [
+						{
+							"key": "orderId",
+							"value": "{{orderIdOk}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete an order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Check the response status code and execute the appropriate test\r",
+							"\r",
+							"const orderId = pm.variables.get(\"orderIdOk\");\r",
+							"\r",
+							"\r",
+							"if (pm.response.code === 404) {\r",
+							"    pm.test(`Error, No Orders With this ID: ${orderId} to delete - Status code is 404`, function () {\r",
+							"    pm.expect(pm.response.code).to.not.equal(404);\r",
+							"    });\r",
+							"} else if (pm.response.code === 204) {\r",
+							"    pm.test(`You Required Order has been deleted sucessfully - Status code is 204`, function () {\r",
+							"        pm.expect(pm.response.code).to.equal(204);\r",
+							"    });\r",
+							"    \r",
+							"} else if (pm.response.code === 401) {\r",
+							"    pm.test(\"Please Register New account and update the token - Status code is 401 Unauthorized\", function () {\r",
+							"       pm.expect(pm.response.code).to.not.equal(401);\r",
+							"    });\r",
+							"\r",
+							"}else if (pm.response.code === 403) {\r",
+							"    pm.test(\"Please check your permissions - Status code is 403 Forbidden\", function () {\r",
+							"        pm.expect(pm.response.code).to.not.equal(403);\r",
+							"    });\r",
+							"} else {\r",
+							"    pm.test(\"Unexpected status code\", function () {\r",
+							"        pm.expect([200, 404]).to.include(pm.response.code);\r",
+							"    });\r",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TokenBestTeam}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/orders/:orderId",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"orders",
+						":orderId"
+					],
+					"variable": [
+						{
+							"key": "orderId",
+							"value": "{{orderIdOk}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "https://simple-books-api.glitch.me",
+			"type": "default"
+		},
+		{
+			"key": "TokenBestTeam",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "orderIdOk",
+			"value": "aswcv6_gE16zINjZS4wAj",
+			"type": "default"
+		}
+	]
+}

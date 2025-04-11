@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f32b8f24-b0e5-40fa-95ac-f49280e8671c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/ReportTestAddAllProductsToCart.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/ReportTestTotalPrice.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/reportCategories_Logo.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/reportContact.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/reportDeleteItems.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/reportPlaceOrder.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/reportSignup.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/reportTestSlide.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/reportlogin.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drivers/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Categories_Logo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ContactFormTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/DeleteOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/LoginWithReport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/PlaceOrderWithReport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/PriceValidation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/SignupWithReport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestAddAllProductsToCart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestSlideNext.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2vV7fM2Glwz1XLQCoA1t5tkUiUI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.OpenBrowser.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TestNG.Categories_Logo.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.CheckoutAllProducts.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.CheckoutAllProductsWithReport.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ContactFormTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.DeleteOrder.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginWithReport.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.OpenBrowser.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.OrderFormTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PlaceOrderTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PlaceOrderWithReport.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PriceValidation.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.SignupWithReport.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TestAddAllProductsToCart.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TestSlideNext.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/testing/code/seleniumtest&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/testing/code/seleniumtest/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.5114943&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f32b8f24-b0e5-40fa-95ac-f49280e8671c" name="Changes" comment="" />
+      <created>1744218492743</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1744218492743</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
