@@ -1,0 +1,91 @@
+Login Test => Valid login as expected. ------------------------------------------------
+Test 1 (Product ID: 1) => Navigated to homepage. 
+Navigated to product page: https://demoblaze.com/prod.html?idp_=1. 
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 2 (Product ID: 2) => Navigated to homepage. 
+Navigated to product page: https://demoblaze.com/prod.html?idp_=2. 
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 3 (Product ID: 3) => Navigated to homepage. 
+Navigated to product page: https://demoblaze.com/prod.html?idp_=3. 
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 4 (Product ID: 4) => Navigated to homepage. 
+Navigated to product page: https://demoblaze.com/prod.html?idp_=4. 
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 5 (Product ID: 5) => Navigated to homepage. 
+Navigated to product page: https://demoblaze.com/prod.html?idp_=5. 
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 6 (Product ID: 6) => Navigated to homepage. 
+Navigated to product page: https://demoblaze.com/prod.html?idp_=6. 
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 7 (Product ID: 7) => Navigated to homepage. 
+Navigated to product page: https://demoblaze.com/prod.html?idp_=7. 
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 8 (Product ID: 8) => Navigated to homepage. 
+Navigated to product page: https://demoblaze.com/prod.html?idp_=8. 
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 9 (Product ID: 9) => Navigated to homepage. 
+Navigated to product page: https://demoblaze.com/prod.html?idp_=9. 
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 10 (Product ID: 10) => Navigated to homepage. 
+Navigated to product page: https://demoblaze.com/prod.html?idp_=10. 
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 11 (Product ID: 11) => Navigated to homepage. 
+Navigated to product page: https://demoblaze.com/prod.html?idp_=11. 
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 12 (Product ID: 12) => Navigated to homepage. 
+Navigated to product page: https://demoblaze.com/prod.html?idp_=12. 
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 13 (Product ID: 13) => Navigated to homepage. 
+Navigated to product page: https://demoblaze.com/prod.html?idp_=13. 
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 14 (Product ID: 14) => Navigated to homepage. 
+Navigated to product page: https://demoblaze.com/prod.html?idp_=14. 
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 15 (Product ID: 15) => Navigated to homepage. 
+Navigated to product page: https://demoblaze.com/prod.html?idp_=15. 
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+

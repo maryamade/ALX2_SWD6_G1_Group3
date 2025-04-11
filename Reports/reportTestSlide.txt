@@ -1,0 +1,9 @@
+Carousel Next Button Test => Navigated to homepage. 
+Initial active slide image: 
+https://demoblaze.com/Samsung1.jpg. Clicked 'Next' button (first time). 
+New active slide image (first change): 
+https://demoblaze.com/nexus1.jpg. Success: slide changed successfully (first time). 
+Clicked 'Next' button (second time). 
+New active slide image (second change): 
+https://demoblaze.com/iphone1.jpg. Success: slide changed successfully (second time). 
+------------------------------------------------

@@ -1,0 +1,24 @@
+Test 1 => Alert: Wrong password.
+Bug: Invalid Password accepted.
+------------------------------------------------
+Test 2 => Alert: User does not exist.
+Valid rejection for non-existing user.
+------------------------------------------------
+Test 3 => Alert: Wrong password.
+Bug: Invalid Password accepted.
+------------------------------------------------
+Test 4 => Alert: Please fill out Username and Password.
+Bug: Empty fields allowed.
+------------------------------------------------
+Test 5 => Alert: Please fill out Username and Password.
+Bug: Empty fields allowed.
+------------------------------------------------
+Test 6 => Alert: Please fill out Username and Password.
+Bug: Empty fields allowed.
+------------------------------------------------
+Test 7 => Valid login as expected.
+Logout successful. 
+------------------------------------------------
+Test 8 => Alert: User does not exist.
+Valid rejection for non-existing user.
+------------------------------------------------
