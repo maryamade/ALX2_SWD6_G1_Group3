@@ -67,5 +67,47 @@ or run as current file of the "ProductPurchaseTest" class
 ![image](https://github.com/user-attachments/assets/542eaf58-8d0c-422c-8269-93dbc5ab9b5c)
 
 ### View the Report 
-To view the report , navigate to `./Reports/DemoblazeTestReport.html` and open it in a browser
-![image](https://github.com/user-attachments/assets/81f68b2a-393a-4881-ac27-9c75be255988)
+To view the report , navigate to `./Reports/Name_of_test_case.txt` to open it
+
+example:
+
+Test 1 => Success: Order placed successfully.
+Thank you for your purchase!
+Id: 9647183
+Amount: 360 USD
+Card Number: 1234567890123456
+Name: Maryam
+Date: 11/3/2025
+OK
+------------------------------------------------
+Test 2 => Correct rejection: Form submission failed due to invalid/missing fields. Alert: Please fill out Name and Creditcard.
+------------------------------------------------
+Test 3 => Bug: Invalid data was accepted.
+Thank you for your purchase!
+Id: 4283531
+Amount: 720 USD
+Card Number: 1234567890123456
+Name: Sara
+Date: 11/3/2025
+OK
+------------------------------------------------
+Test 4 => Bug: Invalid data was accepted.
+Thank you for your purchase!
+Id: 4113824
+Amount: 360 USD
+Card Number: 1234567890123456
+Name: Maryam
+Date: 11/3/2025
+OK
+------------------------------------------------
+Test 5 => Correct rejection: Form submission failed due to invalid/missing fields. Alert: Please fill out Name and Creditcard.
+------------------------------------------------
+Test 6 => Bug: Invalid data was accepted.
+Thank you for your purchase!
+Id: 9604614
+Amount: 720 USD
+Card Number: 1234567890123456
+Name: Maryam
+Date: 11/3/2025
+OK
+------------------------------------------------
