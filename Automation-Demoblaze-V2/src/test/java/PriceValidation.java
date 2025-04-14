@@ -1,3 +1,4 @@
+import java.sql.Driver;
 import java.time.Duration;
 import java.util.List;
 
@@ -44,8 +45,10 @@ public class PriceValidation {
  //   @Test
     public void testCartTotal() {
         try {
+
             // Step 1: Click Phones category
             wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Phones"))).click();
+            Thread.sleep(2000);
             test.log(LogStatus.INFO, "Clicked 'Phones' category.");
 
             // Step 2: Click Nokia lumia 1520
@@ -65,9 +68,10 @@ public class PriceValidation {
             // Step 4: Navigate to Home
             wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@class='nav-link' and contains(text(), 'Home')]"))).click();
             test.log(LogStatus.INFO, "Clicked 'Home' link.");
-
+            Methods.smartWait(driver);
             // Step 5: Click Laptops category
             wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Laptops"))).click();
+            Thread.sleep(2000);
             test.log(LogStatus.INFO, "Clicked 'Laptops' category.");
 
             Methods.smartWait(driver); // to prevent element not found error after click on laptop category
