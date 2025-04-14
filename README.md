@@ -1,9 +1,9 @@
 ## This is Group 3 Team Depi Graduation Project Files.
 
-- Manual Testing
-- Api Testing .JSON File
-- Automation Project [Simple] not using assert or Dashboard Report
-- Automation Project [Advanced] Using SoftAssert and Html Dashboard Report
+- Manual Testing for OpenCart Website
+- Api Testing .JSON File for simple-books-api.glitch.me Website
+- Automation Project [Simple] not using assert or Dashboard Report For DemoBlaze Website
+- Automation Project [Advanced] Using SoftAssert and Html Dashboard Report For DemoBlaze Website
 - Presention Link
 
 ## Group3 Names
