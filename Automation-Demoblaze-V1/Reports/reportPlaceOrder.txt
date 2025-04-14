@@ -1,0 +1,40 @@
+Test 1 => Success: Order placed successfully.
+Thank you for your purchase!
+Id: 9139560
+Amount: 360 USD
+Card Number: 1234567890123456
+Name: Maryam
+Date: 12/3/2025
+OK
+------------------------------------------------
+Test 2 => Correct rejection: Form submission failed due to invalid/missing fields. Alert: Please fill out Name and Creditcard.
+------------------------------------------------
+Test 3 => Bug: Invalid data was accepted.
+Thank you for your purchase!
+Id: 4115769
+Amount: 720 USD
+Card Number: 1234567890123456
+Name: Sara
+Date: 12/3/2025
+OK
+------------------------------------------------
+Test 4 => Bug: Invalid data was accepted.
+Thank you for your purchase!
+Id: 417092
+Amount: 360 USD
+Card Number: 1234567890123456
+Name: Maryam
+Date: 12/3/2025
+OK
+------------------------------------------------
+Test 5 => Correct rejection: Form submission failed due to invalid/missing fields. Alert: Please fill out Name and Creditcard.
+------------------------------------------------
+Test 6 => Bug: Invalid data was accepted.
+Thank you for your purchase!
+Id: 4822845
+Amount: 720 USD
+Card Number: 1234567890123456
+Name: Maryam
+Date: 12/3/2025
+OK
+------------------------------------------------

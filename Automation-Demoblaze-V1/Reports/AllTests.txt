@@ -1,0 +1,301 @@
+Combined Test Report - All Test Cases
+=====================================
+Test Passed: DeleteOrder.testCategories
+------------------------------------------------
+Test Passed: LoginWithReport.loginTest
+------------------------------------------------
+Test Passed: PlaceOrderWithReport.testPlaceOrder
+------------------------------------------------
+Test Passed: PriceValidation.testCartTotal
+------------------------------------------------
+Test Passed: SignupWithReport.testSignupValidation
+------------------------------------------------
+Test Passed: TestAddAllProductsToCart.testAddProductsToCart
+------------------------------------------------
+Test Passed: TestSlideNext.TestSlideNext
+------------------------------------------------
+Test Passed: NextPreviousButtonsFunctionality.testNextPreviousButtonsFunctionality
+------------------------------------------------
+Test Passed: AboutOpenningClossingFunctionality.TestAboutOpenningClossingFunctionality
+------------------------------------------------
+Test Passed: Categories_Logo.testCategories
+------------------------------------------------
+Test Passed: ContactFormTest.testContactForm
+------------------------------------------------
+
+Detailed Test Reports
+=====================
+
+Report: reportDeleteItems.txt
+---------------------
+Test Report - Delete Items
+All items deleted from the cart.
+Test Passed: Navigated, added to cart, and cleared cart.
+------------------------------------------------
+---------------------
+
+Report: reportlogin.txt
+---------------------
+Test 1 => Alert: Wrong password.
+Bug: Invalid Password accepted.
+------------------------------------------------
+Test 2 => Alert: User does not exist.
+Valid rejection for non-existing user.
+------------------------------------------------
+Test 3 => Alert: Wrong password.
+Bug: Invalid Password accepted.
+------------------------------------------------
+Test 4 => Alert: Please fill out Username and Password.
+Bug: Empty fields allowed.
+------------------------------------------------
+Test 5 => Alert: Please fill out Username and Password.
+Bug: Empty fields allowed.
+------------------------------------------------
+Test 6 => Alert: Please fill out Username and Password.
+Bug: Empty fields allowed.
+------------------------------------------------
+Test 7 => Valid login as expected.
+Logout successful. 
+------------------------------------------------
+Test 8 => Alert: User does not exist.
+Valid rejection for non-existing user.
+------------------------------------------------
+---------------------
+
+Report: reportPlaceOrder.txt
+---------------------
+Test 1 => Success: Order placed successfully.
+Thank you for your purchase!
+Id: 9134456
+Amount: 360 USD
+Card Number: 1234567890123456
+Name: Maryam
+Date: 12/3/2025
+OK
+------------------------------------------------
+Test 2 => Correct rejection: Form submission failed due to invalid/missing fields. Alert: Please fill out Name and Creditcard.
+------------------------------------------------
+Test 3 => Bug: Invalid data was accepted.
+Thank you for your purchase!
+Id: 4185311
+Amount: 720 USD
+Card Number: 1234567890123456
+Name: Sara
+Date: 12/3/2025
+OK
+------------------------------------------------
+Test 4 => Exception: stale element reference: stale element not found in the current frame
+  (Session info: chrome=135.0.7049.85)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.12.1', revision: '8e34639b11'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [84c2c402cbd88480b659d7b5904f721c, clickElement {id=f.D26E675A01C03E2D02FCAC11108083AF.d.778A14E43DF0DA403678194B0AC403AF.e.763}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 134.0.6998.165 (fd886e2cb29..., userDataDir: C:\Users\marya\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:5574}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:5574/devtool..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (84c2c402cbd88480b659d7b5904f721c)] -> link text: Samsung galaxy s6]
+Session ID: 84c2c402cbd88480b659d7b5904f721c
+------------------------------------------------
+Test 5 => Correct rejection: Form submission failed due to invalid/missing fields. Alert: Please fill out Name and Creditcard.
+------------------------------------------------
+Test 6 => Bug: Invalid data was accepted.
+Thank you for your purchase!
+Id: 2312074
+Amount: 720 USD
+Card Number: 1234567890123456
+Name: Maryam
+Date: 12/3/2025
+OK
+------------------------------------------------
+---------------------
+
+Report: ReportTestTotalPrice.txt
+---------------------
+Test Report - Test Total Price
+Test Failed: stale element reference: stale element not found in the current frame
+  (Session info: chrome=135.0.7049.85)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.12.1', revision: '8e34639b11'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5fb88ca8f4ffad63e4e3a09789f9b01a, clickElement {id=f.D4AC35196F45143508FFBA565D511D34.d.0506323FF4EF1A927F2C399B59A5EE5E.e.212}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 134.0.6998.165 (fd886e2cb29..., userDataDir: C:\Users\marya\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:5162}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:5162/devtool..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (5fb88ca8f4ffad63e4e3a09789f9b01a)] -> link text: Sony vaio i7]
+Session ID: 5fb88ca8f4ffad63e4e3a09789f9b01a
+------------------------------------------------
+---------------------
+
+Report: reportSignup.txt
+---------------------
+Test 1 => Alert: This user already exist.
+Bug: Invalid Password: [123] accepted.
+------------------------------------------------
+Test 2 => Alert: Please fill out Username and Password.
+Correct rejection for empty field(s).
+------------------------------------------------
+Test 3 => Alert: Please fill out Username and Password.
+Correct rejection for empty field(s).
+------------------------------------------------
+Test 4 => Alert: Please fill out Username and Password.
+Correct rejection for empty field(s).
+------------------------------------------------
+Test 5 => Alert: This user already exist.
+Bug: Invalid Username: [a] and Password: [1] accepted.
+------------------------------------------------
+Test 6 => Alert: Sign up successful.
+Bug: Invalid Username: [Jesse qge] and Password: [pass] accepted.
+------------------------------------------------
+Test 7 => Alert: This user already exist.
+Bug: Invalid Username: [ ] accepted.
+------------------------------------------------
+Test 8 => Alert: This user already exist.
+Bug: Invalid Password: [ ] accepted.
+------------------------------------------------
+Test 9 => Alert: This user already exist.
+Bug: Invalid Username: [ ] and Password: [ ] accepted.
+------------------------------------------------
+Test 10 => Alert: This user already exist.
+Bug: Invalid Username: [1] accepted.
+------------------------------------------------
+Test 11 => Alert: Sign up successful.
+Bug: Invalid Username: [Duane@] and Password: [123] accepted.
+------------------------------------------------
+Test 12 => Alert: Sign up successful.
+Bug: Invalid Password: [short] accepted.
+------------------------------------------------
+Test 13 => Alert: Sign up successful.
+Accepted valid input as expected.
+------------------------------------------------
+Test 14 => Exception: Expected condition failed: waiting for visibility of element located by By.id: sign-username (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.12.1', revision: '8e34639b11'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 134.0.6998.165 (fd886e2cb29..., userDataDir: C:\Users\marya\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:5742}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:5742/devtool..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8b3823fb1e62b2ffec9cffca9528e0ed
+------------------------------------------------
+---------------------
+
+Report: ReportTestAddAllProductsToCart.txt
+---------------------
+Login Test => Valid login as expected. ------------------------------------------------
+Test 1 (Product ID: 1) => Samsung galaxy s6
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 2 (Product ID: 2) => Nokia lumia 1520
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 3 (Product ID: 3) => Nexus 6
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 4 (Product ID: 4) => Samsung galaxy s7
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 5 (Product ID: 5) => Iphone 6 32gb
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 6 (Product ID: 6) => Sony xperia z5
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 7 (Product ID: 7) => HTC One M9
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 8 (Product ID: 8) => Sony vaio i5
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 9 (Product ID: 9) => Sony vaio i7
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 10 (Product ID: 10) => Apple monitor 24
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 11 (Product ID: 11) => MacBook air
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 12 (Product ID: 12) => Dell i7 8gb
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 13 (Product ID: 13) => 2017 Dell 15.6 Inch
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 14 (Product ID: 14) => ASUS Full HD
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Test 15 (Product ID: 15) => MacBook Pro
+Clicked 'Add to cart'. 
+Success: 'Product added' alert displayed and accepted. 
+------------------------------------------------
+
+Checkout Test => Success: Order placed successfully.
+Thank you for your purchase!
+Id: 313597
+Amount: 9850 USD
+Card Number: 1234567890123456
+Name: Maryam
+Date: 12/3/2025
+OK
+------------------------------------------------
+---------------------
+
+Report: reportTestSlide.txt
+---------------------
+Carousel Next Button Test => Navigated to homepage. 
+Initial active slide image: 
+https://demoblaze.com/nexus1.jpg. Clicked 'Next' button (first time). 
+New active slide image (first change): 
+https://demoblaze.com/Samsung1.jpg. Success: slide changed successfully (first time). 
+Clicked 'Next' button (second time). 
+New active slide image (second change): 
+https://demoblaze.com/nexus1.jpg. Success: slide changed successfully (second time). 
+------------------------------------------------
+---------------------
+
+Report: NextPreviousButtonsFunctionality.txt
+---------------------
+Test Report - Pagination Buttons Navigation
+Next button clicked - 'Apple monitor 24' is visible
+Previous button clicked - 'Nokia lumia 1520' is visible
+Test Passed: Successfully tested Next and Previous button functionality.
+------------------------------------------------
+---------------------
+
+Report: AboutOpenningClossingFunctionality.txt
+---------------------
+Test Report - About Modal Functionality
+Test Passed: About modal opened and closed successfully.
+------------------------------------------------
+---------------------
+
+Report: reportCategoriesLOGO.txt
+Error: Could not read report file - .\Reports\reportCategoriesLOGO.txt (The system cannot find the file specified)
+---------------------
+
+Report: reportContactFormTest.txt
+Error: Could not read report file - .\Reports\reportContactFormTest.txt (The system cannot find the file specified)
+---------------------

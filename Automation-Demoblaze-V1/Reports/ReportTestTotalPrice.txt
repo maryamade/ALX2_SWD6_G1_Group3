@@ -1,0 +1,3 @@
+Test Report - Test Total Price
+Test Passed: Total price 1610 matches sum of items 1610.
+------------------------------------------------

@@ -1,0 +1,24 @@
+Test 1 => Alert: Wrong password.
+Valid rejection: Username: [123456] and Password: [abcdef] for invalid password.
+------------------------------------------------
+Test 2 => Alert: User does not exist.
+Valid rejection: Username: [wrongUser] non-existing.
+------------------------------------------------
+Test 3 => Alert: Wrong password.
+Valid rejection: Username: [MaryamSara] and Password: [wrongPass] for invalid password.
+------------------------------------------------
+Test 4 => Alert: Please fill out Username and Password.
+Valid rejection: for empty fields.
+------------------------------------------------
+Test 5 => Alert: Please fill out Username and Password.
+Valid rejection: for empty fields.
+------------------------------------------------
+Test 6 => Alert: Please fill out Username and Password.
+Valid rejection: for empty fields.
+------------------------------------------------
+Test 7 => Valid: Username: [MaryamSara] and Password: [1234567] login as expected.
+Logout successful. 
+------------------------------------------------
+Test 8 => Alert: User does not exist.
+Valid rejection: Username: [wrongUser2] non-existing.
+------------------------------------------------

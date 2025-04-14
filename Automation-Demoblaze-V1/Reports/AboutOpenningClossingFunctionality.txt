@@ -1,0 +1,3 @@
+Test Report - About Modal Functionality
+Test Passed: About modal opened and closed successfully.
+------------------------------------------------

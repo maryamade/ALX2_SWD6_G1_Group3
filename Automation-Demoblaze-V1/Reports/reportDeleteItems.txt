@@ -1,0 +1,4 @@
+Test Report - Delete Items
+All items deleted from the cart.
+Test Passed: Navigated, added to cart, and cleared cart.
+------------------------------------------------

@@ -1,0 +1,3 @@
+Test Report - Categories and Logo Navigation
+Test Passed: Navigated through all categories and returned home using logo.
+------------------------------------------------

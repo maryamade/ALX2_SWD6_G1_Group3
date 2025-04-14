@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-04-12T16:39:22 EET" name="Command line suite" finished-at="2025-04-12T16:46:47 EET" duration-ms="444621">
+    <groups>
+    </groups>
+    <test started-at="2025-04-12T16:39:22 EET" name="Command line test" finished-at="2025-04-12T16:46:47 EET" duration-ms="444621">
+      <class name="Categories_Logo">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Categories_Logo@566d0c69]" started-at="2025-04-12T16:39:33 EET" name="setup" finished-at="2025-04-12T16:39:37 EET" duration-ms="3771" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="waitForPageLoad()[pri:0, instance:Categories_Logo@566d0c69]" started-at="2025-04-12T16:46:00 EET" name="waitForPageLoad" finished-at="2025-04-12T16:46:00 EET" duration-ms="23" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- waitForPageLoad -->
+        <test-method signature="testCategories()[pri:0, instance:Categories_Logo@566d0c69]" started-at="2025-04-12T16:46:00 EET" name="testCategories" finished-at="2025-04-12T16:46:12 EET" duration-ms="11968" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCategories -->
+        <test-method is-config="true" signature="tearDownDriver()[pri:0, instance:Categories_Logo@566d0c69]" started-at="2025-04-12T16:46:12 EET" name="tearDownDriver" finished-at="2025-04-12T16:46:14 EET" duration-ms="1663" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownDriver -->
+        <test-method is-config="true" signature="closeReport()[pri:0, instance:Categories_Logo@566d0c69]" started-at="2025-04-12T16:46:47 EET" name="closeReport" finished-at="2025-04-12T16:46:47 EET" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeReport -->
+      </class> <!-- Categories_Logo -->
+      <class name="PlaceOrderWithReport">
+        <test-method is-config="true" signature="setupReport()[pri:0, instance:PlaceOrderWithReport@543c6f6d]" started-at="2025-04-12T16:39:56 EET" name="setupReport" finished-at="2025-04-12T16:39:56 EET" duration-ms="13" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupReport -->
+        <test-method is-config="true" signature="setupDriver()[pri:0, instance:PlaceOrderWithReport@543c6f6d]" started-at="2025-04-12T16:41:38 EET" name="setupDriver" finished-at="2025-04-12T16:41:39 EET" duration-ms="1278" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupDriver -->
+        <test-method signature="testPlaceOrder()[pri:0, instance:PlaceOrderWithReport@543c6f6d]" started-at="2025-04-12T16:41:39 EET" name="testPlaceOrder" finished-at="2025-04-12T16:43:02 EET" duration-ms="83442" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPlaceOrder -->
+        <test-method is-config="true" signature="tearDownDriver()[pri:0, instance:PlaceOrderWithReport@543c6f6d]" started-at="2025-04-12T16:43:02 EET" name="tearDownDriver" finished-at="2025-04-12T16:43:05 EET" duration-ms="2489" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownDriver -->
+        <test-method is-config="true" signature="closeReport()[pri:0, instance:PlaceOrderWithReport@543c6f6d]" started-at="2025-04-12T16:46:47 EET" name="closeReport" finished-at="2025-04-12T16:46:47 EET" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeReport -->
+      </class> <!-- PlaceOrderWithReport -->
+      <class name="AboutOpenningClossingFunctionality">
+        <test-method is-config="true" signature="setup()[pri:0, instance:AboutOpenningClossingFunctionality@6f667ad1]" started-at="2025-04-12T16:39:22 EET" name="setup" finished-at="2025-04-12T16:39:33 EET" duration-ms="11135" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="waitForPageLoad()[pri:0, instance:AboutOpenningClossingFunctionality@6f667ad1]" started-at="2025-04-12T16:45:55 EET" name="waitForPageLoad" finished-at="2025-04-12T16:45:56 EET" duration-ms="333" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- waitForPageLoad -->
+        <test-method signature="TestAboutOpenningClossingFunctionality()[pri:0, instance:AboutOpenningClossingFunctionality@6f667ad1]" started-at="2025-04-12T16:45:56 EET" name="TestAboutOpenningClossingFunctionality" finished-at="2025-04-12T16:45:59 EET" duration-ms="3236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestAboutOpenningClossingFunctionality -->
+        <test-method is-config="true" signature="tearDownDriver()[pri:0, instance:AboutOpenningClossingFunctionality@6f667ad1]" started-at="2025-04-12T16:45:59 EET" name="tearDownDriver" finished-at="2025-04-12T16:46:00 EET" duration-ms="1484" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownDriver -->
+        <test-method is-config="true" signature="closeReport()[pri:0, instance:AboutOpenningClossingFunctionality@6f667ad1]" started-at="2025-04-12T16:46:47 EET" name="closeReport" finished-at="2025-04-12T16:46:47 EET" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeReport -->
+      </class> <!-- AboutOpenningClossingFunctionality -->
+      <class name="TestAddAllProductsToCart">
+        <test-method is-config="true" signature="setupReport()[pri:0, instance:TestAddAllProductsToCart@441cc260]" started-at="2025-04-12T16:40:05 EET" name="setupReport" finished-at="2025-04-12T16:40:05 EET" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupReport -->
+        <test-method is-config="true" signature="setupDriver()[pri:0, instance:TestAddAllProductsToCart@441cc260]" started-at="2025-04-12T16:44:25 EET" name="setupDriver" finished-at="2025-04-12T16:44:29 EET" duration-ms="3680" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupDriver -->
+        <test-method signature="testAddProductsToCart()[pri:0, instance:TestAddAllProductsToCart@441cc260]" started-at="2025-04-12T16:44:29 EET" name="testAddProductsToCart" finished-at="2025-04-12T16:45:37 EET" duration-ms="67566" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddProductsToCart -->
+        <test-method is-config="true" signature="tearDownDriver()[pri:0, instance:TestAddAllProductsToCart@441cc260]" started-at="2025-04-12T16:45:37 EET" name="tearDownDriver" finished-at="2025-04-12T16:45:37 EET" duration-ms="378" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownDriver -->
+        <test-method is-config="true" signature="closeReport()[pri:0, instance:TestAddAllProductsToCart@441cc260]" started-at="2025-04-12T16:46:47 EET" name="closeReport" finished-at="2025-04-12T16:46:47 EET" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeReport -->
+      </class> <!-- TestAddAllProductsToCart -->
+      <class name="DeleteOrder">
+        <test-method is-config="true" signature="setup()[pri:0, instance:DeleteOrder@7a30d1e6]" started-at="2025-04-12T16:39:37 EET" name="setup" finished-at="2025-04-12T16:39:44 EET" duration-ms="7454" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="waitForPageLoad()[pri:0, instance:DeleteOrder@7a30d1e6]" started-at="2025-04-12T16:40:13 EET" name="waitForPageLoad" finished-at="2025-04-12T16:40:13 EET" duration-ms="98" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- waitForPageLoad -->
+        <test-method signature="testCategories()[pri:0, instance:DeleteOrder@7a30d1e6]" started-at="2025-04-12T16:40:13 EET" name="testCategories" finished-at="2025-04-12T16:40:48 EET" duration-ms="35333" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCategories -->
+        <test-method is-config="true" signature="tearDownDriver()[pri:0, instance:DeleteOrder@7a30d1e6]" started-at="2025-04-12T16:40:48 EET" name="tearDownDriver" finished-at="2025-04-12T16:40:50 EET" duration-ms="1851" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownDriver -->
+        <test-method is-config="true" signature="closeReport()[pri:0, instance:DeleteOrder@7a30d1e6]" started-at="2025-04-12T16:46:47 EET" name="closeReport" finished-at="2025-04-12T16:46:47 EET" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeReport -->
+      </class> <!-- DeleteOrder -->
+      <class name="SignupWithReport">
+        <test-method is-config="true" signature="setupReport()[pri:0, instance:SignupWithReport@383f1975]" started-at="2025-04-12T16:40:05 EET" name="setupReport" finished-at="2025-04-12T16:40:05 EET" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupReport -->
+        <test-method is-config="true" signature="setupDriver()[pri:0, instance:SignupWithReport@383f1975]" started-at="2025-04-12T16:43:16 EET" name="setupDriver" finished-at="2025-04-12T16:43:21 EET" duration-ms="4621" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupDriver -->
+        <test-method signature="testSignupValidation()[pri:0, instance:SignupWithReport@383f1975]" started-at="2025-04-12T16:43:21 EET" name="testSignupValidation" finished-at="2025-04-12T16:44:24 EET" duration-ms="63239" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSignupValidation -->
+        <test-method is-config="true" signature="tearDownDriver()[pri:0, instance:SignupWithReport@383f1975]" started-at="2025-04-12T16:44:24 EET" name="tearDownDriver" finished-at="2025-04-12T16:44:25 EET" duration-ms="1329" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownDriver -->
+        <test-method is-config="true" signature="closeReport()[pri:0, instance:SignupWithReport@383f1975]" started-at="2025-04-12T16:46:47 EET" name="closeReport" finished-at="2025-04-12T16:46:47 EET" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeReport -->
+      </class> <!-- SignupWithReport -->
+      <class name="PriceValidation">
+        <test-method is-config="true" signature="setup()[pri:0, instance:PriceValidation@13eb8acf]" started-at="2025-04-12T16:39:56 EET" name="setup" finished-at="2025-04-12T16:40:05 EET" duration-ms="9352" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="waitForPageLoad()[pri:0, instance:PriceValidation@13eb8acf]" started-at="2025-04-12T16:43:05 EET" name="waitForPageLoad" finished-at="2025-04-12T16:43:05 EET" duration-ms="190" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- waitForPageLoad -->
+        <test-method signature="testCartTotal()[pri:0, instance:PriceValidation@13eb8acf]" started-at="2025-04-12T16:43:05 EET" name="testCartTotal" finished-at="2025-04-12T16:43:14 EET" duration-ms="9243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCartTotal -->
+        <test-method is-config="true" signature="tearDownDriver()[pri:0, instance:PriceValidation@13eb8acf]" started-at="2025-04-12T16:43:14 EET" name="tearDownDriver" finished-at="2025-04-12T16:43:16 EET" duration-ms="1943" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownDriver -->
+        <test-method is-config="true" signature="closeReport()[pri:0, instance:PriceValidation@13eb8acf]" started-at="2025-04-12T16:46:47 EET" name="closeReport" finished-at="2025-04-12T16:46:47 EET" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeReport -->
+      </class> <!-- PriceValidation -->
+      <class name="LoginWithReport">
+        <test-method is-config="true" signature="setupReport()[pri:0, instance:LoginWithReport@1d371b2d]" started-at="2025-04-12T16:39:44 EET" name="setupReport" finished-at="2025-04-12T16:39:44 EET" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupReport -->
+        <test-method is-config="true" signature="setupDriver()[pri:0, instance:LoginWithReport@1d371b2d]" started-at="2025-04-12T16:40:50 EET" name="setupDriver" finished-at="2025-04-12T16:40:53 EET" duration-ms="3169" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupDriver -->
+        <test-method signature="loginTest()[pri:0, instance:LoginWithReport@1d371b2d]" started-at="2025-04-12T16:40:53 EET" name="loginTest" finished-at="2025-04-12T16:41:36 EET" duration-ms="42371" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="tearDownDriver()[pri:0, instance:LoginWithReport@1d371b2d]" started-at="2025-04-12T16:41:36 EET" name="tearDownDriver" finished-at="2025-04-12T16:41:38 EET" duration-ms="2146" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownDriver -->
+        <test-method is-config="true" signature="closeReport()[pri:0, instance:LoginWithReport@1d371b2d]" started-at="2025-04-12T16:46:47 EET" name="closeReport" finished-at="2025-04-12T16:46:47 EET" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeReport -->
+      </class> <!-- LoginWithReport -->
+      <class name="NextPreviousButtonsFunctionality">
+        <test-method is-config="true" signature="setup()[pri:0, instance:NextPreviousButtonsFunctionality@26dcd8c0]" started-at="2025-04-12T16:39:44 EET" name="setup" finished-at="2025-04-12T16:39:56 EET" duration-ms="11499" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="waitForPageLoad()[pri:0, instance:NextPreviousButtonsFunctionality@26dcd8c0]" started-at="2025-04-12T16:45:50 EET" name="waitForPageLoad" finished-at="2025-04-12T16:45:50 EET" duration-ms="156" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- waitForPageLoad -->
+        <test-method signature="testNextPreviousButtonsFunctionality()[pri:0, instance:NextPreviousButtonsFunctionality@26dcd8c0]" started-at="2025-04-12T16:45:50 EET" name="testNextPreviousButtonsFunctionality" finished-at="2025-04-12T16:45:53 EET" duration-ms="3077" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNextPreviousButtonsFunctionality -->
+        <test-method is-config="true" signature="tearDownDriver()[pri:0, instance:NextPreviousButtonsFunctionality@26dcd8c0]" started-at="2025-04-12T16:45:53 EET" name="tearDownDriver" finished-at="2025-04-12T16:45:55 EET" duration-ms="2078" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownDriver -->
+        <test-method is-config="true" signature="closeReport()[pri:0, instance:NextPreviousButtonsFunctionality@26dcd8c0]" started-at="2025-04-12T16:46:47 EET" name="closeReport" finished-at="2025-04-12T16:46:47 EET" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeReport -->
+      </class> <!-- NextPreviousButtonsFunctionality -->
+      <class name="TestSlideNext">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestSlideNext@73a00e09]" started-at="2025-04-12T16:40:05 EET" name="setup" finished-at="2025-04-12T16:40:12 EET" duration-ms="6943" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="getActiveSlideImageSrc()[pri:0, instance:TestSlideNext@73a00e09]" started-at="2025-04-12T16:45:37 EET" name="getActiveSlideImageSrc" finished-at="2025-04-12T16:45:37 EET" duration-ms="53" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getActiveSlideImageSrc -->
+        <test-method signature="TestSlideNext()[pri:0, instance:TestSlideNext@73a00e09]" started-at="2025-04-12T16:45:37 EET" name="TestSlideNext" finished-at="2025-04-12T16:45:50 EET" duration-ms="12398" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestSlideNext -->
+        <test-method is-config="true" signature="tearDownDriver()[pri:0, instance:TestSlideNext@73a00e09]" started-at="2025-04-12T16:45:50 EET" name="tearDownDriver" finished-at="2025-04-12T16:45:50 EET" duration-ms="411" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownDriver -->
+        <test-method is-config="true" signature="closeReport()[pri:0, instance:TestSlideNext@73a00e09]" started-at="2025-04-12T16:46:47 EET" name="closeReport" finished-at="2025-04-12T16:46:47 EET" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeReport -->
+      </class> <!-- TestSlideNext -->
+      <class name="ContactFormTest">
+        <test-method is-config="true" signature="setupReport()[pri:0, instance:ContactFormTest@388b401d]" started-at="2025-04-12T16:39:37 EET" name="setupReport" finished-at="2025-04-12T16:39:37 EET" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupReport -->
+        <test-method is-config="true" signature="setupDriver()[pri:0, instance:ContactFormTest@388b401d]" started-at="2025-04-12T16:46:14 EET" name="setupDriver" finished-at="2025-04-12T16:46:18 EET" duration-ms="4366" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupDriver -->
+        <test-method signature="testContactForm()[pri:0, instance:ContactFormTest@388b401d]" started-at="2025-04-12T16:46:18 EET" name="testContactForm" finished-at="2025-04-12T16:46:45 EET" duration-ms="27042" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testContactForm -->
+        <test-method is-config="true" signature="tearDownDriver()[pri:0, instance:ContactFormTest@388b401d]" started-at="2025-04-12T16:46:45 EET" name="tearDownDriver" finished-at="2025-04-12T16:46:47 EET" duration-ms="1349" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownDriver -->
+        <test-method is-config="true" signature="closeReport()[pri:0, instance:ContactFormTest@388b401d]" started-at="2025-04-12T16:46:47 EET" name="closeReport" finished-at="2025-04-12T16:46:47 EET" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeReport -->
+      </class> <!-- ContactFormTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>

@@ -1,0 +1,5 @@
+Test Report - Pagination Buttons Navigation
+Next button clicked - 'Apple monitor 24' is visible
+Previous button clicked - 'Nokia lumia 1520' is visible
+Test Passed: Successfully tested Next and Previous button functionality.
+------------------------------------------------
