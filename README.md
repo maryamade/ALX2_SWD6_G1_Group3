@@ -8,8 +8,8 @@
 
 ## Group3 Names
 
-- Sara Maher Moustafa
+- Sara Maher Mostafa
 - Mariam Adel Ramdan
 - Mohamed Ahmed Gomaa
-- Nissrin Fathy Farag
+- Nesrin Fathy Farag
 - Shahenda Magdy Abdelrhman
