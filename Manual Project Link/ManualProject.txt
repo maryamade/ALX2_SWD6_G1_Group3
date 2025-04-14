@@ -1,5 +1,11 @@
 1- Manual Project
 https://docs.google.com/spreadsheets/d/1D4im2-66aTSyIioeJJe17c7B4PSwQG1xOWLcnl03aSw/edit?usp=sharing
 
-2-Defect Reports
-https://docs.google.com/spreadsheets/d/1-DrcP3RCE5SdgkJoT8QXzveVuoe2UGbw/edit?usp=sharing&ouid=103474465325367583713&rtpof=true&sd=true
+2.1- Maryam Adel : test cases & bug report: https://docs.google.com/spreadsheets/d/13mrGgX7q3myL-brf9HAOsaHGNK7AFzIhO1nhSMdvdQI/edit?usp=sharing
+2.2- Sara Maher: test cases & bug report: https://docs.google.com/spreadsheets/d/1WqNWXWbC5P2XXx164sJv6C5aXvEiI-nOo9NsDbMRgN0/edit?gid=0#gid=0
+2.3- Shahenda Magdy: test cases: https://docs.google.com/spreadsheets/d/1bOu31JjY4rT8tzt6PYXQf-jpx7akJaLP/edit?gid=744216681#gid=744216681
+                     bug report: https://docs.google.com/spreadsheets/d/1-DrcP3RCE5SdgkJoT8QXzveVuoe2UGbw/edit?usp=sharing&ouid=103474465325367583713&rtpof=true&sd=true
+2.4- Mohamed Gomaa: test cases:https://intrast.sharepoint.com/:x:/s/ALX2_SWD6_G1/ETV-MbFvFcVOkUgIZPTFIOkB4-e9McrPJNSwabCroV2yag?e=LMkYyR
+                    bug report: https://intrast.sharepoint.com/:x:/s/ALX2_SWD6_G1/EfD5CIp7brFMlMqMb-5u2f8BgqWwOINfVZiolaDyPxBa9g?e=NkXMBV
+2.5- Nesrin Fathy: test cases:https://intrast-my.sharepoint.com/:x:/g/personal/nesrinfathyfarg_intrast_com_eg/EeFrPplWg1BJm8s21indvsUBvG14ndGQfo6wpORk2TUbLA?e=JL1SvZ
+                   bug report: https://intrast-my.sharepoint.com/:x:/g/personal/nesrinfathyfarg_intrast_com_eg/EZ6Fh3_0PKtMlYlAc2ZroDgBEfUdwbfnUsaZnlN8CPda8Q?rtime=NMJ8HJV73Ug
