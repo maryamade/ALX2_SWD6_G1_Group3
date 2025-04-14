@@ -23,7 +23,6 @@ This project uses Maven to manage dependencies. Key dependencies include:
             <artifactId>selenium-java</artifactId>
             <version>4.12.1</version>
         </dependency>
-
 ```
 - **TestNG**
 ```
@@ -33,7 +32,15 @@ This project uses Maven to manage dependencies. Key dependencies include:
             <version>7.7.1</version>
             <scope>test</scope>
         </dependency>
-
+```
+- **ExtentReport** (For generating Html Dashboard Report)
+```
+        <dependency>
+            <groupId>com.relevantcodes</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>2.41.2</version>
+            <scope>test</scope>
+        </dependency>
 ```
 - **Java Faker** (for generating fake data)
 ```
@@ -69,45 +76,6 @@ or run as current file of the "ProductPurchaseTest" class
 ### View the Report 
 To view the report , navigate to `./Reports/Name_of_test_case.txt` to open it
 
-example:
+![image](https://i.ibb.co/kgmqfS6Z/b2.png)
+![image](https://i.ibb.co/qMKVJjtJ/b1.png)
 
-Test 1 => Success: Order placed successfully.
-Thank you for your purchase!
-Id: 9647183
-Amount: 360 USD
-Card Number: 1234567890123456
-Name: Maryam
-Date: 11/3/2025
-OK
-------------------------------------------------
-Test 2 => Correct rejection: Form submission failed due to invalid/missing fields. Alert: Please fill out Name and Creditcard.
-------------------------------------------------
-Test 3 => Bug: Invalid data was accepted.
-Thank you for your purchase!
-Id: 4283531
-Amount: 720 USD
-Card Number: 1234567890123456
-Name: Sara
-Date: 11/3/2025
-OK
-------------------------------------------------
-Test 4 => Bug: Invalid data was accepted.
-Thank you for your purchase!
-Id: 4113824
-Amount: 360 USD
-Card Number: 1234567890123456
-Name: Maryam
-Date: 11/3/2025
-OK
-------------------------------------------------
-Test 5 => Correct rejection: Form submission failed due to invalid/missing fields. Alert: Please fill out Name and Creditcard.
-------------------------------------------------
-Test 6 => Bug: Invalid data was accepted.
-Thank you for your purchase!
-Id: 9604614
-Amount: 720 USD
-Card Number: 1234567890123456
-Name: Maryam
-Date: 11/3/2025
-OK
-------------------------------------------------
