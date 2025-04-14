@@ -43,6 +43,7 @@ public class Categories_Logo {
         try {
             // Test Phones
             wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Phones"))).click();
+            Thread.sleep(2000);
             test.log(LogStatus.INFO, "Clicked 'Phones' category.");
             wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Samsung galaxy s6"))).click();
             test.log(LogStatus.INFO, "Clicked 'Samsung galaxy s6'.");
@@ -55,6 +56,7 @@ public class Categories_Logo {
 
             // Test Laptops
             wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Laptops"))).click();
+            Thread.sleep(2000);
             test.log(LogStatus.INFO, "Clicked 'Laptops' category.");
             wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Sony vaio i5"))).click();
             test.log(LogStatus.INFO, "Clicked 'Sony vaio i5'.");
@@ -67,6 +69,7 @@ public class Categories_Logo {
 
             // Test Monitors
             wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Monitors"))).click();
+            Thread.sleep(2000);
             test.log(LogStatus.INFO, "Clicked 'Monitors' category.");
             wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Apple monitor 24"))).click();
             test.log(LogStatus.INFO, "Clicked 'Apple monitor 24'.");
