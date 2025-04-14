@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-04-12T18:01:24 EET" name="Command line suite" finished-at="2025-04-12T18:01:58 EET" duration-ms="34845">
+    <groups>
+    </groups>
+    <test started-at="2025-04-12T18:01:24 EET" name="Command line test" finished-at="2025-04-12T18:01:58 EET" duration-ms="34845">
+      <class name="Categories_Logo">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Categories_Logo@192d43ce]" started-at="2025-04-12T18:01:24 EET" name="setup" finished-at="2025-04-12T18:01:30 EET" duration-ms="6036" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="startTest()[pri:0, instance:Categories_Logo@192d43ce]" started-at="2025-04-12T18:01:38 EET" name="startTest" finished-at="2025-04-12T18:01:38 EET" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method signature="testCategories()[pri:0, instance:Categories_Logo@192d43ce]" started-at="2025-04-12T18:01:38 EET" name="testCategories" finished-at="2025-04-12T18:01:44 EET" duration-ms="6032" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Test failed due to exception: stale element reference: stale element not found in the current frame
+  (Session info: chrome=135.0.7049.85)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.12.1', revision: '8e34639b11'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [85626a08fd8537c1524180985de6a3ae, clickElement {id=f.FFE2C1ACEF8C210C7C94B4F285E58846.d.DCA1BC2C5D9365AAC8C421C704E344E4.e.1070}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 134.0.6998.165 (fd886e2cb29..., userDataDir: C:\Users\gowano\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60186}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60186/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (85626a08fd8537c1524180985de6a3ae)] -> link text: Sony vaio i5]
+Session ID: 85626a08fd8537c1524180985de6a3ae]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Test failed due to exception: stale element reference: stale element not found in the current frame
+  (Session info: chrome=135.0.7049.85)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.12.1', revision: '8e34639b11'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [85626a08fd8537c1524180985de6a3ae, clickElement {id=f.FFE2C1ACEF8C210C7C94B4F285E58846.d.DCA1BC2C5D9365AAC8C421C704E344E4.e.1070}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 134.0.6998.165 (fd886e2cb29..., userDataDir: C:\Users\gowano\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60186}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60186/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (85626a08fd8537c1524180985de6a3ae)] -> link text: Sony vaio i5]
+Session ID: 85626a08fd8537c1524180985de6a3ae
+at org.testng.Assert.fail(Assert.java:99)
+at Categories_Logo.testCategories(Categories_Logo.java:118)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at MainTest3.main(MainTest3.java:32)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCategories -->
+        <test-method is-config="true" signature="endTest()[pri:0, instance:Categories_Logo@192d43ce]" started-at="2025-04-12T18:01:44 EET" name="endTest" finished-at="2025-04-12T18:01:45 EET" duration-ms="719" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Categories_Logo@192d43ce]" started-at="2025-04-12T18:01:57 EET" name="tearDown" finished-at="2025-04-12T18:01:58 EET" duration-ms="1473" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Categories_Logo -->
+      <class name="PriceValidation">
+        <test-method is-config="true" signature="setup()[pri:0, instance:PriceValidation@498d318c]" started-at="2025-04-12T18:01:30 EET" name="setup" finished-at="2025-04-12T18:01:38 EET" duration-ms="8250" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="startTest()[pri:0, instance:PriceValidation@498d318c]" started-at="2025-04-12T18:01:45 EET" name="startTest" finished-at="2025-04-12T18:01:45 EET" duration-ms="149" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method signature="testCartTotal()[pri:0, instance:PriceValidation@498d318c]" started-at="2025-04-12T18:01:45 EET" name="testCartTotal" finished-at="2025-04-12T18:01:56 EET" duration-ms="11408" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCartTotal -->
+        <test-method is-config="true" signature="tearDownDriver()[pri:0, instance:PriceValidation@498d318c]" started-at="2025-04-12T18:01:56 EET" name="tearDownDriver" finished-at="2025-04-12T18:01:57 EET" duration-ms="520" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownDriver -->
+        <test-method is-config="true" signature="closeReport()[pri:0, instance:PriceValidation@498d318c]" started-at="2025-04-12T18:01:58 EET" name="closeReport" finished-at="2025-04-12T18:01:58 EET" duration-ms="123" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeReport -->
+      </class> <!-- PriceValidation -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>
